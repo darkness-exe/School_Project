@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(60, 52, 214);
+}
+
+.header__wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 50px;
+    color: #fff;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fff;
+    transition: .2s;
+}
+
+/* FIXED HEADER */
+
+.header__fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(60, 52, 214);
+    animation-name: header;
+    animation-duration: .2s;
+}
+
+@keyframes header {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+
+
+
+
+
+/* CONTENT */
+
+
+.content {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+}
+
+.block {
+    -webkit-box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-bottom: 4px solid blue;
+}
+
+.block__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+button {
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow, transform;
+    background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+}
+
+button:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+}
+
+.input_login{
+    width: 300px;
+        /* Увеличение ширины */
+        height: 40px;
+        /* Увеличение высоты */
+        font-size: 16px;
+        /* Увеличение размера шрифта */
+        padding: 10px;
+        /* Добавление отступов вокруг содержимого */
+        margin-bottom: 20px;
+        /* Добавление отступа снизу */
+}
+
+.button_login {
+    width: 170px;
+    /* Увеличение ширины кнопки */
+    height: 50px;
+    /* Увеличение высоты кнопки */
+    font-size: 17px;
+    /* Увеличение размера шрифта кнопки */
+}

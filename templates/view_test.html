@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test View</title>
+</head>
+
+<body>
+
+    <form action="{{ url_for('view_test', token=data[1]) }}" method="post">
+        <p><b>Ввидите свое имя</b>
+        <p><input type="text" name="name_user" id="name_user"></p>
+        <p><b>Ввидите свою фамилию</b></p>
+        <input type="text" name="surname" id="g">
+
+        <br>
+        <p><b>1 Вопрос: {{ data[2] }}</b></p>
+        <p><input type="radio" name="answer_1" value="{{ data[3] }}">{{ data[3] }}</p>
+        <p><input type="radio" name="answer_1" value="{{ data[4] }}">{{ data[4] }}</p>
+        <p><input type="radio" name="answer_1" value="{{ data[5] }}" required>{{ data[5] }}</p>
+
+        <br>
+
+        <p><b>2 Вопрос: {{ data[7] }}</b></p>
+        <p><input type="radio" name="answer_2" value="{{ data[8] }}">{{ data[8] }}</p>
+        <p><input type="radio" name="answer_2" value="{{ data[9] }}">{{ data[9] }}</p>
+        <p><input type="radio" name="answer_2" value="{{ data[10] }}" required>{{ data[10] }}</p>
+
+        <p><b>3 Вопрос: {{ data[12] }}</b></p>
+        <p><input type="radio" name="answer_3" value="{{ data[13] }}">{{ data[13] }}</p>
+        <p><input type="radio" name="answer_3" value="{{ data[14] }}">{{ data[14] }}</p>
+        <p><input type="radio" name="answer_3" value="{{ data[15] }}" required>{{ data[15] }}</p>
+
+        <p><b>4 Вопрос: {{ data[17] }}</b></p>
+        <p><input type="radio" name="answer_4" value="{{ data[18] }}">{{ data[18] }}</p>
+        <p><input type="radio" name="answer_4" value="{{ data[19] }}">{{ data[19] }}</p>
+        <p><input type="radio" name="answer_4" value="{{ data[20] }}" required>{{ data[20] }}</p> 
+
+        <p><b>5 Вопрос: {{ data[22] }}</b></p>
+        <p><input type="radio" name="answer_5" value="{{ data[18] }}">{{ data[23] }}</p>
+        <p><input type="radio" name="answer_5" value="{{ data[19] }}">{{ data[24] }}</p>
+        <p><input type="radio" name="answer_5" value="{{ data[20] }}" required>{{ data[25] }}</p>
+
+        <p><b>6 Вопрос: {{ data[27] }}</b></p>
+        <p><input type="radio" name="answer_6" value="{{ data[18] }}">{{ data[28] }}</p>
+        <p><input type="radio" name="answer_6" value="{{ data[19] }}">{{ data[29] }}</p>
+        <p><input type="radio" name="answer_6" value="{{ data[20] }}" required>{{ data[30] }}</p>
+        <p><input type="submit" value="Выбрать"></p>
+    </form>
+
+    <!-- Remove this extra closing form tag -->
+    <!-- </form> -->
+
+</body>
+
+</html>

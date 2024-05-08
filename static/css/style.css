@@ -4,14 +4,29 @@
     padding: 0;
 }
 
+
 body {
     font-family: 'Arial';
+    /* background: #fff url(static/img/background.jpg); */
+    background: #fff url(static/img/back.jpg);
+    /* background-image: url('../img/background.jpg'); */
+    /* путь к вашему изображению */
+    /* background-size: cover; */
+    /* чтобы изображение занимало всю область */
+}
+
+h1{
+    font-size: 55px;
 }
 
 header {
     width: 100%;
     padding: 20px;
     background-color: rgb(60, 52, 214);
+}
+
+.reg{
+    font-size: 23;
 }
 
 .header__wrap {
@@ -79,14 +94,19 @@ header {
 
 
 
-
-
+.title_index{
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 23px;
+}
+/* 
 
 
 /* CONTENT */
 
 
 .content {
+
     max-width: 1000px;
     margin: 20px auto;
     display: grid;
@@ -99,12 +119,12 @@ header {
     -webkit-box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
     box-shadow: -2px -2px 28px -10px rgba(0, 0, 0, 0.75);
-    padding: 20px;
+    padding: 15px;
     border-bottom: 4px solid blue;
 }
 
 .block__title {
-    font-size: 25px;
+    font-size: 35px;
     margin-bottom: 20px;
 }
 
@@ -117,8 +137,12 @@ footer {
     color: #fff;
 }
 
+.button_create_test{
+    font-size: 25px;
+}
+
 button {
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
     outline: 0;
     border: 0;
@@ -164,4 +188,61 @@ button:active {
     /* Увеличение высоты кнопки */
     font-size: 17px;
     /* Увеличение размера шрифта кнопки */
+}
+
+.post_test{
+    color: #222;
+}
+
+.input_q {
+    /* max-width: 190px; */
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+    outline: 1px solid lightgrey;
+}
+
+.form_test{
+    padding: 35px;
+}
+
+
+input[type="radio"] {
+    width: 20px;
+    /* Ширина */
+    height: 20px;
+    /* Высота */
+}
+
+
+
+
+.block__title{
+    font-size: 40px;
+}
+
+
+.button_create_test_sum{
+    font-size: 20px;
+}
+.input_q{
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
 }

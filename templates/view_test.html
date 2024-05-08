@@ -1,56 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Test View</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-    <form action="{{ url_for('view_test', token=data[1]) }}" method="post">
-        <p><b>Ввидите свое имя</b>
-        <p><input type="text" name="name_user" id="name_user"></p>
-        <p><b>Ввидите свою фамилию</b></p>
-        <input type="text" name="surname" id="g">
+    <!-- HEADER -->
 
+    <header class="header">
+        <div class="header__wrap">
+            <div class="logo"><a href="/" class="logo__link"><img
+                        src="{{ url_for('static', filename='img/logo.png') }}"></a></div>
+            <nav class="nav">
+                <ul class="list">
+                    <li class="item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="item"><a href="/profile" class="nav__link">Profile</a></li>
+                    <!-- <li class="item"><a href="#!" class="nav__link">my test</a></li> -->
+                    <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HEADER FINISH -->
+
+    <main class="main">
+        <br>
+        <br>
+        <div class="content">
+            <div class="block">
+    <form action="{{ url_for('view_test', token=data[1]) }}" method="post">
+        <center>
+            <h1>Прохождение теста</h1>
+        </center>
+        <br>
+        <p><input type="text" name="name_user" id="name_user" class="input_q" placeholder="Ввидите свое имя"></p></p>
+        <br>
+        <input type="text" name="surname" id="g" class="input_q" placeholder="Ввидите свою фамилию">
+        <br>
         <br>
         <p><b>1 Вопрос: {{ data[2] }}</b></p>
-        <p><input type="radio" name="answer_1" value="{{ data[3] }}">{{ data[3] }}</p>
-        <p><input type="radio" name="answer_1" value="{{ data[4] }}">{{ data[4] }}</p>
-        <p><input type="radio" name="answer_1" value="{{ data[5] }}" required>{{ data[5] }}</p>
-
         <br>
-
+        <p><input type="radio" name="answer_1" value="{{ data[3] }}">{{ data[3] }}</p>
+        <br>
+        <p><input type="radio" name="answer_1" value="{{ data[4] }}">{{ data[4] }}</p>
+        <br>
+        <p><input type="radio" name="answer_1" value="{{ data[5] }}" required>{{ data[5] }}</p>
+    
+        
+        <br>
         <p><b>2 Вопрос: {{ data[7] }}</b></p>
+        <br>
         <p><input type="radio" name="answer_2" value="{{ data[8] }}">{{ data[8] }}</p>
+        <br>
         <p><input type="radio" name="answer_2" value="{{ data[9] }}">{{ data[9] }}</p>
+        <br>
         <p><input type="radio" name="answer_2" value="{{ data[10] }}" required>{{ data[10] }}</p>
-
+        
+        <br>
         <p><b>3 Вопрос: {{ data[12] }}</b></p>
+        <br>
         <p><input type="radio" name="answer_3" value="{{ data[13] }}">{{ data[13] }}</p>
+        <br>
         <p><input type="radio" name="answer_3" value="{{ data[14] }}">{{ data[14] }}</p>
+        <br>
         <p><input type="radio" name="answer_3" value="{{ data[15] }}" required>{{ data[15] }}</p>
-
+        
+        <br>
         <p><b>4 Вопрос: {{ data[17] }}</b></p>
+        <br>
         <p><input type="radio" name="answer_4" value="{{ data[18] }}">{{ data[18] }}</p>
+        <br>
         <p><input type="radio" name="answer_4" value="{{ data[19] }}">{{ data[19] }}</p>
-        <p><input type="radio" name="answer_4" value="{{ data[20] }}" required>{{ data[20] }}</p> 
-
+        <br>
+        <p><input type="radio" name="answer_4" value="{{ data[20] }}" required>{{ data[20] }}</p>
+        <br>
+        
         <p><b>5 Вопрос: {{ data[22] }}</b></p>
-        <p><input type="radio" name="answer_5" value="{{ data[18] }}">{{ data[23] }}</p>
-        <p><input type="radio" name="answer_5" value="{{ data[19] }}">{{ data[24] }}</p>
-        <p><input type="radio" name="answer_5" value="{{ data[20] }}" required>{{ data[25] }}</p>
-
+        <br>
+        <p><input type="radio" name="answer_5" value="{{ data[23] }}">{{ data[23] }}</p>
+        <br>
+        <p><input type="radio" name="answer_5" value="{{ data[24] }}">{{ data[24] }}</p>
+        <br>
+        <p><input type="radio" name="answer_5" value="{{ data[25] }}" required>{{ data[25] }}</p>
+        <br>
+        
         <p><b>6 Вопрос: {{ data[27] }}</b></p>
-        <p><input type="radio" name="answer_6" value="{{ data[18] }}">{{ data[28] }}</p>
-        <p><input type="radio" name="answer_6" value="{{ data[19] }}">{{ data[29] }}</p>
-        <p><input type="radio" name="answer_6" value="{{ data[20] }}" required>{{ data[30] }}</p>
-        <p><input type="submit" value="Выбрать"></p>
+        <br>
+        <p><input type="radio" name="answer_6" value="{{ data[28] }}">{{ data[28] }}</p>
+        <br>
+        <p><input type="radio" name="answer_6" value="{{ data[29] }}">{{ data[29] }}</p>
+        <br>
+        <p><input type="radio" name="answer_6" value="{{ data[30] }}" required>{{ data[30] }}</p>
+        <br>
+        <p><button type="submit" class="button_create_test_sum">Пройти</button></p>
     </form>
 
-    <!-- Remove this extra closing form tag -->
-    <!-- </form> -->
 
+                <br><br>
+            </div>
+        </div>
+
+    </main>
+    <style>
+        .block {
+            background: white;
+        }
+    
+        body {
+            background-image: url("{{ url_for('static', filename='img/back.jpg') }}");
+        }
+    </style>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>

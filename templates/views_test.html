@@ -15,14 +15,15 @@
 
     <header class="header">
         <div class="header__wrap">
-            <div class="logo"><a href="/" class="logo__link"><img src="{{ url_for('static', filename='img/logo.png') }}" ></a></div>
+            <div class="logo"><a href="/" class="logo__link"><img
+                        src="{{ url_for('static', filename='img/logo.png') }}"></a></div>
             <nav class="nav">
                 <ul class="list">
                     <li class="item"><a href="/" class="nav__link">Home</a></li>
                     <li class="item"><a href="/profile" class="nav__link">Profile</a></li>
                     <!-- <li class="item"><a href="#!" class="nav__link">my test</a></li> -->
                     <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
-                </ul> 
+                </ul>
             </nav>
         </div>
     </header>
@@ -35,41 +36,44 @@
         <div class="content">
             <div class="block">
                 <div class="title_index">
-                    <h1>Цифровой сервис проверки знания обучающихся</h1>
+                    <h1>Пройти тест</h1>
                 </div>
-                <br>
-                <br>
-                <div >
+
+                <div>
                     <center>
-                        <button  class="button_create_test"  onclick="window.location.href = '/test/{{ token }}';">
-                            Создать тест
-                        </button>
                         <br>
-                        <br>
-                        <button  class="button_create_test"  onclick="window.location.href = '/views_test';">
-                            Пройти тест 
-                        </button>
+                        <form method="POST">
+
+                            <input type="text" class="input_q" placeholder="Ввидите ссылку на тест" name="token">
+                            <br>
+                            <br>
+                            <button type="submit" class="button_create_test_sum">Пройти</button>
+                           
+
+
+
+                        </form>
+     
                     </center>
                 </div>
 
                 <style>
-                    .block{
+                    .block {
                         background: white;
                     }
-                    body{
-                    background-image: url(static/img/back.jpg);        
-}
 
-
+                    body {
+                        background-image: url(static/img/back.jpg);
+                    }
                 </style>
                 <br><br>
             </div>
         </div>
-        
+
     </main>
 
     <!-- Scripts -->
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>

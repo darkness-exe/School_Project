@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru"></html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School project</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 
 <body>
@@ -20,7 +20,6 @@
             <nav class="nav">
                 <ul class="list">
                     <li class="item"><a href="#!" class="nav__link">Home</a></li>
-                    <li class="item"><a href="#!" class="nav__link">my test</a></li>
                     <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
                 </ul>
             </nav>
@@ -47,7 +46,15 @@
                         <input type="submit" value="Зарегистрироваться" class="button_login">
                     </center>
                 </form>
-
+                <style>
+                    .block {
+                        background: white;
+                    }
+                
+                    body {
+                        background-image: url(static/img/back.jpg);
+                    }
+                </style>
             </div>
         </div>
     </main>

@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School project</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+                    <style>
+                        body {
+                            background: #fff url(static/img/back.jpg);
+                        }
+                    </style>
+
 </head>
 
 <body>
@@ -19,8 +25,9 @@
                         src="{{ url_for('static', filename='img/logo.png') }}"></a></div>
             <nav class="nav">
                 <ul class="list">
-                    <li class="item"><a href="#!" class="nav__link">Home</a></li>
-                    <li class="item"><a href="#!" class="nav__link">my test</a></li>
+                    <li class="item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="item"><a href="/profile" class="nav__link">Profile</a></li>
+                    <!-- <li class="item"><a href="#!" class="nav__link">my test</a></li> -->
                     <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
                 </ul>
             </nav>
@@ -30,100 +37,123 @@
     <!-- HEADER FINISH -->
 
     <main class="main">
+        <br>
+        <br>
         <div class="content">
             <div class="block">
-                <center>
-                    <h5 class="block__title">Регистрация</h5>
-                </center>
-                <form method="POST" action="/test/{{ token }}" class="post_test">
-    <h3>Вопрос 1</h3>
-    <p><b></b></p>
-    <p><input type="text" name="question__1"></p>
-    <br>
-    
-    <p><input name="q1" type="radio" value="q1_1" required><input type="text" name="q1_1_text"></p>
-    <p><input name="q1" type="radio" value="q1_2" required><input type="text" name="q1_2_text"></p>
-    <p><input name="q1" type="radio" value="q1_3" required><input type="text" name="q1_3_text"></p>
-    
-    <br>    
-    <h3>Вопрос 2</h3>
-    
-    <p><b></b></p>
-    <p><input type="text" name="question__2"></p>
-    <br>
-    
-    <p><input name="q2" type="radio" value="q2_1" required><input type="text" name="q2_1_text"></p>
-    <p><input name="q2" type="radio" value="q2_2" required><input type="text" name="q2_2_text"></p>
-    <p><input name="q2" type="radio" value="q2_3" required><input type="text" name="q2_3_text"></p>
-    
-    
-    <h3>Вопрос 3</h3>
-    
-    <p><b></b></p>
-    <p><input type="text" name="question__3"></p>
-    <br>
-    
-    <p><input name="q3" type="radio" value="q3_1" required><input type="text" name="q3_1_text"></p>
-    <p><input name="q3" type="radio" value="q3_2" required><input type="text" name="q3_2_text"></p>
-    <p><input name="q3" type="radio" value="q3_3" required><input type="text" name="q3_3_text"></p>
-    
-    
-    <h3>Вопрос 4</h3>
-    
-    <p><b></b></p>
-    <p><input type="text" name="question__4"></p>
-    <br>
-    
-    <p><input name="q4" type="radio" value="q4_1" required><input type="text" name="q4_1_text"></p>
-    <p><input name="q4" type="radio" value="q4_2" required><input type="text" name="q4_2_text"></p>
-    <p><input name="q4" type="radio" value="q4_3" required><input type="text" name="q4_3_text"></p>
-    
-    
-    <h3>Вопрос 5</h3>
-    
-    <p><b></b></p>
-    <p><input type="text" name="question__5"></p>
-    <br>
-    
-    <p><input name="q5" type="radio" value="q5_1" required><input type="text" name="q5_1_text"></p>
-    <p><input name="q5" type="radio" value="q5_2" required><input type="text" name="q5_2_text"></p>
-    <p><input name="q5" type="radio" value="q5_3" required><input type="text" name="q5_3_text"></p>
-    
-    
-    <h3>Вопрос 6</h3>
-    
-    <p><b></b></p>
-    <p><input type="text" name="question__6"></p>
-    <br>
-    
-    <p><input name="q6" type="radio" value="q6_1" required><input type="text" name="q6_1_text"></p>
-    <p><input name="q6" type="radio" value="q6_2" required><input type="text" name="q6_2_text"></p>
-    <p><input name="q6" type="radio" value="q6_3" required><input type="text" name="q6_3_text"></p>
-    <input type="submit">
-<br>
-<br>
 
-<br>
+                <!-- <div class="reg">
+                    <div class="title_index">
+                    </div> -->
+                    
+                    
+                    <div class="form_test">
+                        <form method="POST" action="/test/{{ token }}" class="post_test">
+                            <center>
+                                <h1 class="block__title" >Регистрация</h1>
+                            </center>
+                            <p><b></b></p>
+                            <p><input type="text" name="question__1" class="input_q" placeholder="Вопрос 1"></p>
+                            <br>
+                            
+                            
+                            <p><input name="q1" type="radio" value="q1_1" required><input type="text" name="q1_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q1" type="radio" value="q1_2" required><input type="text" name="q1_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q1" type="radio" value="q1_3" required><input type="text" name="q1_3_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+    
+                            <br>
 
-<br>
+    
+                            <p><b></b></p>
+                            <p><input type="text" name="question__2" class="input_q" placeholder="Вопрос 2"></p>
+                            <br>
+                            
+                            <p><input name="q2" type="radio" value="q2_1" required><input type="text" name="q2_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q2" type="radio" value="q2_2" required><input type="text" name="q2_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q2" type="radio" value="q2_3" required><input type="text" name="q2_3_text" class="input_q" placeholder="Вариант ответа"></p>
+    
+    
+                            <br>
+                            <br>
 
-<br>
+                            <p><b></b></p>
+                            <p><input type="text" name="question__3" class="input_q" placeholder="Вопрос 3"></p>
+                            <br>
+                            <p><input name="q3" type="radio" value="q3_1" required><input type="text" name="q3_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q3" type="radio" value="q3_2" required><input type="text" name="q3_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q3" type="radio" value="q3_3" required><input type="text" name="q3_3_text" class="input_q" placeholder="Вариант ответа"></p>
+    
+    
+                            <br>
+                            <br>
+                            <p><b></b></p>
+                            <p><input type="text" name="question__4" class="input_q" placeholder="Вопрос 4"></p>
+                            
+                            <br>
+                            <p><input name="q4" type="radio" value="q4_1" required><input type="text" name="q4_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q4" type="radio" value="q4_2" required><input type="text" name="q4_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q4" type="radio" value="q4_3" required><input type="text" name="q4_3_text" class="input_q" placeholder="Вариант ответа"></p>
+    
+    
+                            <br>
+                            <br>
+                            <p><b></b></p>
+                            <p><input type="text" name="question__5" class="input_q" placeholder="Вопрос 5"></p>
+                            
+                            <br>
+                            <p><input name="q5" type="radio" value="q5_1" required><input type="text" name="q5_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q5" type="radio" value="q5_2" required><input type="text" name="q5_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q5" type="radio" value="q5_3" required><input type="text" name="q5_3_text" class="input_q" placeholder="Вариант ответа"></p>
+    
+    
+                            <br>
+                            <br>
+                            <p><b></b></p>
+                            <p><input type="text" name="question__6" class="input_q" placeholder="Вопрос 6"></p>
+                            
+                            <br>
+                            <p><input name="q6" type="radio" value="q6_1" required><input type="text" name="q6_1_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q6" type="radio" value="q6_2" required><input type="text" name="q6_2_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <br>
+                            <p><input name="q6" type="radio" value="q6_3" required><input type="text" name="q6_3_text" class="input_q" placeholder="Вариант ответа"></p>
+                            <!-- <input type="submit" > -->
+                            <br>
+                            
+                                
+                                    <button class="button_create_test_sum" type="submit">Создать</button>
 
-<br>
+                            
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                    </div>
 
-</form>
 
+                </div>
+<style>
+    .block {
+        background: white;
+    }
+
+    body {
+        background-image: url("{{ url_for('static', filename='img/back.jpg') }}");
+    }
+</style>
+
+                <br><br
             </div>
         </div>
+
     </main>
 
     <!-- Scripts -->

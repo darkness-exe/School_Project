@@ -21,9 +21,9 @@
                 <ul class="list">
                     <li class="item"><a href="/" class="nav__link">Home</a></li>
                     <li class="item"><a href="/profile" class="nav__link">Profile</a></li>
-                    <li class="item"><a href="#!" class="nav__link">my test</a></li>
+
                     <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
-                    <button><a href="/loging">loging</a></button>
+
                 </ul>
             </nav>
         </div>
@@ -36,13 +36,35 @@
             <div class="block">
                 <center>
 
-                    <h5 class="block__title">Создание теста</h5>
+                    <h5 class="block__title">Тест создан!</h5>
+                    <button onclick="copyTextToClipboard()">Нажмите, чтобы скопировать ссылку на ваш тест</button>
                 </center>
-                <h1>Тест создан!</h1>
             </div>
         </div>
     </main>
 
+    
+    <script>
+        function copyTextToClipboard() {
+            var text = "http://127.0.0.1:5000/views/{{ token }}"; // Замените эту строку на текст, который вы хотите скопировать
+
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+        }
+    </script>
+    <style>
+        .block {
+            background: white;
+        }
+    
+        body {
+            background-image: url("{{ url_for('static', filename='img/back.jpg') }}");
+        }
+    </style>
     <!-- Scripts -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>

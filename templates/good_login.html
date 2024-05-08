@@ -15,14 +15,15 @@
 
     <header class="header">
         <div class="header__wrap">
-            <div class="logo"><a href="/" class="logo__link"><img src="{{ url_for('static', filename='img/logo.png') }}" ></a></div>
+            <div class="logo"><a href="/" class="logo__link"><img
+                        src="{{ url_for('static', filename='img/logo.png') }}"></a></div>
             <nav class="nav">
                 <ul class="list">
                     <li class="item"><a href="/" class="nav__link">Home</a></li>
                     <li class="item"><a href="/profile" class="nav__link">Profile</a></li>
                     <!-- <li class="item"><a href="#!" class="nav__link">my test</a></li> -->
                     <li class="item"><a href="/loging" class="nav__link">Log in </a></li>
-                </ul> 
+                </ul>
             </nav>
         </div>
     </header>
@@ -39,37 +40,27 @@
                 </div>
                 <br>
                 <br>
-                <div >
+                <div>
                     <center>
-                        <button  class="button_create_test"  onclick="window.location.href = '/test/{{ token }}';">
+                        <button class="button_create_test" onclick="window.location.href = '/test/{{ token }}';">
                             Создать тест
-                        </button>
-                        <br>
-                        <br>
-                        <button  class="button_create_test"  onclick="window.location.href = '/views_test';">
-                            Пройти тест 
                         </button>
                     </center>
                 </div>
 
                 <style>
-                    .block{
-                        background: white;
+                    body {
+                        background: #fff url(static/img/background.jpg);
                     }
-                    body{
-                    background-image: url(static/img/back.jpg);        
-}
-
-
                 </style>
                 <br><br>
             </div>
         </div>
-        
+
     </main>
 
     <!-- Scripts -->
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>

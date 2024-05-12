@@ -282,6 +282,7 @@ def get_db_connection():
     return sqlite3.connect(DATABASE_NAME)
 
 def main():
+    """Функция для запуска всех функций"""
     with get_db_connection() as conn:
         conn = sqlite3.connect(DATABASE_NAME)
         cur = conn.cursor()
